@@ -9,4 +9,12 @@ class Tanah extends Model
 {
     /** @use HasFactory<\Database\Factories\TanahFactory> */
     use HasFactory;
+
+    protected $table = 'tanahs';
+    protected $fillable = [
+        'nama_tanah',
+        'kode_tanah',
+        'luas',
+        'no_sertifikat',
+    ];
 }

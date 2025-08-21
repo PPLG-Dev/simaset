@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Tanah;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class TanahSeeder extends Seeder
 {
@@ -12,6 +13,7 @@ class TanahSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // Tanah::factory()->count(10)->create();
+        
     }
 }

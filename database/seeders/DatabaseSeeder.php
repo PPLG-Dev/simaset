@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Tanah;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,11 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // $this->call([
+        //     TanahSeeder::class,
+        // ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $Tanah = Tanah::create([
+            'nama_tanah' => 'Tanah Contoh',
+            'kode_tanah' => 'TC001',
+            'luas' => 500,
+            'no_sertifikat' => 'SERT001',
         ]);
+
     }
 }
