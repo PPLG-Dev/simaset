@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Bangunan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class RuanganFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_ruangan' => fake()->sentence(),
+            'kode_ruangan' => fake()->unique()->word(),
+            'bangunan_id' => Bangunan::factory(),
         ];
     }
 }
