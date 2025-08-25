@@ -10,7 +10,7 @@ class Bangunan extends Model
     /** @use HasFactory<\Database\Factories\BangunanFactory> */
     use HasFactory;
 
-    protected $table = 'bangunans';
+    protected $table = 'bangunan';
 
     protected $fillable = [
         'nama_bangunan',

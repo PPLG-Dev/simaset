@@ -10,7 +10,8 @@ class Tanah extends Model
     /** @use HasFactory<\Database\Factories\TanahFactory> */
     use HasFactory;
 
-    protected $table = 'tanahs';
+    protected $table = 'tanah';
+
     protected $fillable = [
         'nama_tanah',
         'kode_tanah',
@@ -18,7 +19,7 @@ class Tanah extends Model
         'no_sertifikat',
     ];
 
-    function bangunan() {
+    public function bangunan(){
         return $this->hasMany(Bangunan::class);
     }
 }
