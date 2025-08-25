@@ -17,4 +17,8 @@ class Tanah extends Model
         'luas',
         'no_sertifikat',
     ];
+
+    function bangunan() {
+        return $this->hasMany(Bangunan::class);
+    }
 }

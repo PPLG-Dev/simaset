@@ -17,7 +17,10 @@ class TanahFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama_tanah' => fake()->word(),
+            'kode_tanah' => fake()->unique()->word(),
+            'luas' => fake()->word(),
+            'no_sertifikat' => fake()->word(),
         ];
     }
 }

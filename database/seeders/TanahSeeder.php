@@ -13,7 +13,6 @@ class TanahSeeder extends Seeder
      */
     public function run(): void
     {
-        // Tanah::factory()->count(10)->create();
-        
+        Tanah::factory()->count(10)->create();
     }
 }
