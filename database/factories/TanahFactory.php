@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tanah>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\tanah>
  */
 class TanahFactory extends Factory
 {
@@ -20,7 +20,7 @@ class TanahFactory extends Factory
             'nama_tanah' => fake()->word(),
             'kode_tanah' => fake()->unique()->word(),
             'luas' => fake()->word(),
-            'no_sertifikat' => fake()->word(),
+            'no_sertifikat' => fake()->randomNumber(),
         ];
     }
 }

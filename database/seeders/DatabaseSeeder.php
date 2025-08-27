@@ -3,10 +3,14 @@
 namespace Database\Seeders;
 
 use App\Models\Bangunan;
-use App\Models\User;
+use App\Models\Barang;
+use App\Models\Kategori;
+use App\Models\Ruangan;
 use App\Models\Tanah;
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,20 +19,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // User::factory(10)->create();
         
-        $Tanah = Tanah::create([
-            'nama_tanah' => 'Tanah Contoh',
-            'kode_tanah' => 'TC001',
-            'luas' => 500,
-            'no_sertifikat' => 'SERT001',
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => Hash::make('admin123'),
+            'role' => 'admin'
         ]);
-        
-        $this->call([
-            TanahSeeder::class,
-            RuanganSeeder::class,
-            BangunanSeeder::class,
-            KategoriSeeder::class,
-            BarangSeeder::class,
-        ]);
+
+        // TanahSeeder.php
+        Tanah::factory(10)->create();
+        // BangunanSeeder.php
+        Bangunan::factory(10)->create();
+        // RuanganSeeder.php
+        Ruangan::factory(10)->create();
+        // KategoriSeeder.php
+        Kategori::factory(10)->create();
+        // BarangSeeder.php
+        Barang::factory(10)->create();
     }
 }

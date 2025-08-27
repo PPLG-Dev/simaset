@@ -6,7 +6,7 @@ use App\Models\Tanah;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Bangunan>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\bangunan>
  */
 class BangunanFactory extends Factory
 {
