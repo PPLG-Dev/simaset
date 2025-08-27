@@ -17,7 +17,7 @@
                         <a class="nav-link" href="#">Users</a>
                     @endif
                     <a class="nav-link" href="{{ route('tanah.index') }}">Tanah</a>
-                    <a class="nav-link" href="#">Bangunan</a>
+                    <a class="nav-link" href="{{ route('bangunan.index') }}">Bangunan</a>
                     <a class="nav-link" href="#">Ruangan</a>
                     <a class="nav-link" href="#">Kategori</a>
                     <a class="nav-link" href="#">Barang</a>

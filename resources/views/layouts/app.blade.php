@@ -13,16 +13,17 @@
 
 <body class="vh-100 overflow-hidden">
     @include('layouts.nav')
-    @session('status')
-        <div class="alert alert-success" role="alert">
-            {{ status('success') }}
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-    @endsession
-    @session('error')
-        <div class="alert alert-danger" role="alert">
-            {{ status('error') }}
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
         </div>
-    @endsession
+    @endif
     <div class="container-fluid h-100 overflow-x-scroll">
         <div class="row">
             <div class="col">
