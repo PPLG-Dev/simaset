@@ -22,10 +22,16 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         
         User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'Test Admin',
             'email' => 'test@example.com',
             'password' => Hash::make('admin123'),
             'role' => 'admin'
+        ]);
+        User::factory()->create([
+            'name' => 'Test Petugas',
+            'email' => 'petugas@example.com',
+            'password' => Hash::make('petugas123'),
+            'role' => 'petugas'
         ]);
 
         // TanahSeeder.php

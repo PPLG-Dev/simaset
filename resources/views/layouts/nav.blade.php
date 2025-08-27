@@ -14,7 +14,7 @@
                 @auth
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     @if (auth()->user()->role === 'admin')
-                        <a class="nav-link" href="#">Users</a>
+                        <a class="nav-link" href="{{ route('users.index') }}">Users</a>
                     @endif
                     <a class="nav-link" href="{{ route('tanah.index') }}">Tanah</a>
                     <a class="nav-link" href="{{ route('bangunan.index') }}">Bangunan</a>

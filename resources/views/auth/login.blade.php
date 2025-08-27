@@ -23,10 +23,9 @@
                                 class="form-control">
                         </div>
                         <div class="mb-2 row">
-                            <div class="col-6 mx-auto">
-                                <button type="submit" class="btn btn-block btn-success me-2">Submit</button>
-                                <p class="text-muted">Atau</p>
-                                <button type="reset" class="btn btn-outline-secondary me-2">Register</button>
+                            <div class="space-y-2">
+                                <p class="text-muted">Belum memiliki akun? <a href="#register" class="link-underline-primary">Daftar Disini!</a></p>
+                                <button type="submit" class="btn btn-block btn-success me-2">Login</button>
                             </div>
                         </div>
                     </form>
