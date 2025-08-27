@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TanahController;
 // use App\Models\Barang; ini dihapus
 use Illuminate\Support\Facades\Route;
@@ -8,6 +9,13 @@ Route::get('/', function () {
     return view('home', ['name' => 'Jane Doe']);
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // Route::get('/barang', function () {
 //     return view('data', [
 //         'title' => 'Barang',
